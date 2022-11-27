@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "DownloadArchive";
+}
+
+<h3>Download Archive</h3>
+
+@using (Html.BeginForm("DownloadArchive", "Archive", FormMethod.Post))
+{
+    <input type="submit" value="Download" />
+    @ViewBag.Message
+}

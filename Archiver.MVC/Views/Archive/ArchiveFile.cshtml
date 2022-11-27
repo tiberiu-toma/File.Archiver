@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "ArchiveFile";
+}
+<h2>File Archiver</h2>
+@using (Html.BeginForm("ArchiveFile", "Archive", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        @Html.TextBox("file", "", new { type = "file" }) <br />
+        <input type="submit" value="Archive" />
+        @ViewBag.Message
+    </div>
+}
